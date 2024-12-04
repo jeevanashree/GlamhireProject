@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.container p {
+    margin: 5px;
+}
+
+/* Order Form Styles */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.order-form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.order-form-container:hover {
+    transform: scale(1.02);
+}
+
+.order-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Buttons for Rent and Buy */
+.product-action-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.rent-btn {
+    background-color: #FF8C00;
+}
+
+.rent-btn:hover {
+    background-color: #e07b00;
+    transform: translateY(-5px);
+}
+
+.buy-btn {
+    background-color: #28a745;
+}
+
+.buy-btn:hover {
+    background-color: #218838;
+    transform: translateY(-5px);
+}
+
+/* Form Styles */
+.order-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.order-form input,
+.order-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.order-form textarea {
+    resize: vertical;
+}
+
+.terms-container {
+    margin-bottom: 20px;
+}
+
+.terms-container p {
+    font-size: 14px;
+    color: #555;
+}
+
+.terms-container label {
+    font-size: 14px;
+    display: block;
+}
+
+.submit-button-container {
+    text-align: center;
+}
+
+.submit-btn {
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}

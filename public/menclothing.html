@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlamHire - Men's Clothing</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #575757;
+            color: #ffffff;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ffffff;
+            margin: 20px 0;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(135deg, #1abc9c, #3498db);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header .container {
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* Main Section */
+        main {
+            padding: 50px 20px;
+            background-color: #bebebe;
+        }
+
+        main h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Product List Styling */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .product-item {
+            background-color: #3e3c40;
+            color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid #e74c3c;
+        }
+
+        .product-item h3 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin: 20px 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .buy-btn, .rent-btn {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            color: white;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .buy-btn:hover, .rent-btn:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            main {
+                padding: 30px 15px;
+            }
+
+            .product-list {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .product-item h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>GlamHire</h1>
+            <p>Your go-to platform for stylish clothes, available to rent or buy!</p>
+        </div>
+    </header>
+
+    <main>
+        <h2>Men's Clothing Collection</h2>
+        <div id="product-list" class="product-list">
+            <!-- 1st Product -->
+            <div class="product-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxSzXCEUcjGc0TnV4xAM7MdOpzF3SPalKW3g&s" alt="Product 1">
+                <h3>Stylish Jacket</h3>
+                <p class="price">₹1200</p>
+                <div class="actions">
+                    <a href="rent.html"><button class="buy-btn">Buy</button></a> 
+                    <a href="rent.html"><button class="buy-btn">Rent</button></a> 
+                </div>
+            </div>
+
+            <!-- 2nd Product -->
+            <div class="product-item">
+                <img src="https://images-cdn.ubuy.co.in/6555b54359c67c5a345a7433-bonobos-men-s-washed-slim-chino-pant.jpg" alt="Product 2">
+                <h3>Chinos</h3>
+                <p class="price">₹800</p>
+                <div class="actions">
+                    <a href="rent.html"><button class="buy-btn">Buy</button></a> 
+                    <a href="rent.html"><button class="buy-btn">Rent</button></a> 
+                </div>
+            </div>
+
+            <!-- 3rd Product -->
+            <div class="product-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUyvCkGfNwbevYBDNJAoWKUAUXFOqL67u0Lw&s" alt="Product 3">
+                <h3>Woolen Coat</h3>
+                <p class="price">₹1500</p>
+                <div class="actions">
+                    <a href="rent.html"><button class="buy-btn">Buy</button></a> 
+                    <a href="rent.html"><button class="buy-btn">Rent</button></a>
+                </div>
+            </div>
+
+            <!-- 4th Product -->
+            <div class="product-item">
+                <img src="https://images-cdn.ubuy.co.in/6381577957d96f1e2c52e9f4-symoid-mens-cargo-pants-solid-casual.jpg" alt="Product 4">
+                <h3>Cargo Pants</h3>
+                <p class="price">₹700</p>
+                <div class="actions">
+                    <a href="rent.html"><button class="buy-btn">Buy</button></a> 
+                    <a href="rent.html"><button class="buy-btn">Rent</button></a>
+                </div>
+            </div>
+
+            <!-- Additional Products Here... -->
+            <div class="product-item">
+                <img src="https://images-cdn.ubuy.co.in/6381577957d96f1e2c52e9f4-symoid-mens-cargo-pants-solid-casual.jpg" alt="Product 4">
+                <h3>Cargo pants</h3>
+                <p class="price">700</p>
+                <div class="actions">
+                    <a href="rent.html"><button class="buy-btn">Buy</button></a> 
+                    <a href="rent.html"><button class="buy-btn">Rent</button></a>
+                </div>
+            </div>
+
+            <!-- 5th Product -->
+            <div class="product-item">
+                <img src="https://thedailyguardian.com/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-30-at-10.57.29-PM.jpeg" alt="Product 5">
+                <h3>ethnic wear</h3>
+                <p class="price">2509</p>
+                <div class="actions">
+                    <a href="rent.html"><button class="buy-btn">Buy</button></a> 
+                    <a href="rent.html"><button class="buy-btn">Rent</button></a>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwI5rLHw7sPNmHXZ210Pnsg_DwQVHndoDG8g&s" alt="Product 25">
+                <h3>Vest</h3>
+                <p class="price">2000</p>
+                <div class="actions">
+                    <a href="rent.html"><button class="buy-btn">Buy</button></a> 
+                    <a href="rent.html"><button class="buy-btn">Rent</button></a>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR2lrkJZVO-577GGrNcUdW-dzaXqYOBlnJ1g&s" alt="Product 25">
+                <h3>Sherwani</h3>
+                <p class="price">2500</p>
+                <div class="actions">
+                    <a href="rent.html"><button class="buy-btn">Buy</button></a> 
+                    <a href="rent.html"><button class="buy-btn">Rent</button></a>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://aestheticnation.co.in/cdn/shop/files/FleecetechOversizedJoggerGreyMelange.jpg?v=1697301532" alt="Product 25">
+                <h3>Joggers</h3>
+                <p class="price">999</p>
+                <div class="actions">
+                    <a href="rent.html"><button class="buy-btn">Buy</button></a> 
+                    <a href="rent.html"><button class="buy-btn">Rent</button></a>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTd0ZH1UNiNz-shPtstWAsFKgadJW2hWiXCQ&s" alt="Product 25">
+                <h3>Complete Suit</h3>
+                <p class="price">5000</p>
+                <div class="actions">
+                    <a href="rent.html"><button class="buy-btn">Buy</button></a> 
+                    <a href="rent.html"><button class="buy-btn">Rent</button></a>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://www.thefashionisto.com/wp-content/uploads/2022/07/Brunello-Cucinelli-Collection-Men-Spring-Summer-2023-Lookbook-016.jpg" alt="Product 25">
+                <h3>Stylish Jacket</h3>
+                <p class="price">1699</p>
+                <div class="actions">
+                    <a href="rent.html"><button class="buy-btn">Buy</button></a> 
+                    <a href="rent.html"><button class="buy-btn">Rent</button></a>                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://images.cbazaar.com/images/navy-blue-dupion-silk-embroidered-kurta-pyjama-kpmvs132-u.jpg" alt="Product 25">
+                <h3>Indian Outfit</h3>
+                <p class="price">4000</p>
+                <div class="actions">
+                    <button class="buy-btn">Buy</button>
+                    <button class="rent-btn">Rent</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://otunbastore.com/cdn/shop/products/il_fullxfull.5312620089_h1tr.jpg?v=1698366058" alt="Product 25">
+                <h3>Kaftan</h3>
+                <p class="price">3456</p>
+                <div class="actions">
+                    <button class="buy-btn">Buy</button>
+                    <button class="rent-btn">Rent</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThZ5oQvJHi_t1F6tvlY0lsHBIjtfQm97oYdji2kIrMlB-uDGpFWzRfF_UT23XLTlI4o9A&usqp=CAU" alt="Product 25">
+                <h3>Eligant Suit</h3>
+                <p class="price">2509</p>
+                <div class="actions">
+                    <button class="buy-btn">Buy</button>
+                    <button class="rent-btn">Rent</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1350090_alternate10?$plpDeskRF$" alt="Product 25">
+                <h3>Formal wear</h3>
+                <p class="price">3000</p>
+                <div class="actions">
+                    <button class="buy-btn">Buy</button>
+                    <button class="rent-btn">Rent</button>
+                </div>
+            </div>
+
+ 
+            <div class="product-item">
+                <img src="https://media4.s-nbcnews.com/i/streams/2014/May/140501/2D274905752454-crocodile-tee-636.jpg" alt="Product 25">
+                <h3>Party wear shirt</h3>
+                <p class="price">1999</p>
+                <div class="actions">
+                    <button class="buy-btn">Buy</button>
+                    <button class="rent-btn">Rent</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GlamHire. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

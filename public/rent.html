@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details - GlamHire</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 50px;
+        }
+
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header h1 {
+            font-size: 48px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        .order-form-container {
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: zoomIn 1s ease-in-out;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+        }
+
+        .radio-buttons-container {
+            margin-bottom: 20px;
+        }
+
+        .radio-btn {
+            margin-right: 15px;
+            font-size: 16px;
+        }
+
+        .terms-container {
+            margin-top: 20px;
+        }
+
+        .submit-button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .submit-btn {
+            background-color: #4a90e2;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.05);
+            background-color: #357ab7;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>GlamHire</h1>
+            <p>Complete Your Order Details</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="order-form-container" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Order Form</h2>
+
+            <!-- Radio Buttons for Rent or Buy -->
+            <div class="radio-buttons-container">
+                <label class="radio-btn">
+                    <input type="radio" name="orderType" value="rent" required> Rent
+                </label>
+                <label class="radio-btn">
+                    <input type="radio" name="orderType" value="buy" required> Buy
+                </label>
+            </div>
+
+            <form action="/order" method="POST" id="order-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" name="contact" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="pincode">Pincode:</label>
+                    <input type="text" id="pincode" name="pincode" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="place">Place:</label>
+                    <input type="text" id="place" name="place" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="district">District:</label>
+                    <input type="text" id="district" name="district" required>
+                </div>
+
+                <div class="terms-container">
+                    <p><strong>Note:</strong> Only Cash on Delivery (COD) is accepted.</p>
+                    <p>For rentals, the full amount is required upfront. 70% will be refunded upon the product's return.</p>
+                    <label>
+                        <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                        I agree to the terms and conditions.
+                    </label>
+                </div>
+
+                <div class="submit-button-container">
+                    <button type="submit" class="submit-btn">Submit Order</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS and AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init();
+    </script>
+</body>
+
+</html>

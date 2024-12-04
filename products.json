@@ -1,0 +1,50 @@
+[
+    {
+        "category": "dress",
+        "description": "a stylish knee length dress",
+        "image_url": "https://www.soosi.co.in/cdn/shop/products/WhatsApp_Image_2020-01-30_at_19.33.00_580x.jpg?v=1580395279",
+        "name": "stylish dress",
+        "price": 2000.0,
+        "product_id": 101
+    },
+    {
+        "category": "top",
+        "description": null,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEhWNTcku4YtpIIHemglhyTmLattIEjgJZaA&s",
+        "name": "casual top",
+        "price": 1299.0,
+        "product_id": 102
+    },
+    {
+        "category": "dress",
+        "description": null,
+        "image_url": "https://ahlabuy.com/img/p/1/5/8/0/7/5/0/1580750-large_default.jpg",
+        "name": "elegant gown",
+        "price": 18000.0,
+        "product_id": 103
+    },
+    {
+        "category": null,
+        "description": null,
+        "image_url": null,
+        "name": null,
+        "price": null,
+        "product_id": 104
+    },
+    {
+        "category": null,
+        "description": null,
+        "image_url": null,
+        "name": null,
+        "price": null,
+        "product_id": 105
+    },
+    {
+        "category": null,
+        "description": null,
+        "image_url": null,
+        "name": null,
+        "price": null,
+        "product_id": 106
+    }
+]

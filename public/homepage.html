@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlamHire - Rent & Style</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      overflow-x: hidden;
+    }
+    .hero-section {
+  height: 100vh;
+  background-image: url('bg.png'); /* Corrected syntax */
+  color: white;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+    .hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      animation: slideIn 1.2s ease-in-out;
+    }
+    .hero-description {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    .cta-btn {
+      background-color: #ff758c;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .cta-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes slideIn {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .categories, .new-arrivals {
+      padding: 40px;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .category-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .category-card {
+      width: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .category-card img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .category-card h3 {
+      margin: 10px 0;
+    }
+    .category-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .category-card:hover img {
+      transform: scale(1.1);
+    }
+    .arrivals {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .arrival-item {
+      width: 300px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .arrival-item img {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+    .arrival-item:hover img {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1 class="hero-title">Rent. Style. Shine. Repeat.</h1>
+    <p class="hero-description">
+      Find the perfect outfit for any occasion. Affordable rental options, trendy collections, and personalized style recommendations!
+    </p>
+    <a href="login.html"><button class="cta-btn">Sign Up Now</button></a>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <h2 class="section-title">Browse by Category</h2>
+    <div class="category-cards">
+      <div class="category-card">
+        <a href="womenclothing.html">
+          <img src="https://img.freepik.com/free-photo/group-international-friends-posing-studio-infoor-photo-three-women-bright-dresses_197531-26104.jpg" alt="Women’s Clothing">
+        </a>
+        <h3>Women’s Clothing</h3>
+      </div>
+      <div class="category-card">
+        <a href="menclothing.html">
+          <img src="https://malestandard.com/wp-content/uploads/2020/02/dbspring.png" alt="Men’s Clothing">
+        </a>
+        <h3>Men’s Clothing</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals Section -->
+  <section class="new-arrivals">
+    <h2 class="section-title">New Arrivals</h2>
+    <div class="arrivals">
+      <div class="arrival-item">
+        <img src="https://dressrent.in/cdn/shop/products/peachball_1200x1200.jpg?v=1539266936" alt="Floral Evening Gown">
+        <p>Floral Evening Gown</p>
+      </div>
+      <div class="arrival-item">
+        <img src="https://www.parivarceremony.com/media/catalog/product/cache/62408a38a401bb86dbe3ed2f017b539f/p/1/p1045mw08_1.jpg" alt="Men's Tuxedo">
+        <p>Men's Tuxedo</p>
+      </div>
+      <div class="arrival-item">
+        <img src="https://imgmedia.lbb.in/media/2023/03/6405a57f46573d0e613a42e0_1678091647350.jpg" alt="Chic Party Dress">
+        <p>Chic Party Dress</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 GlamHire. All rights reserved.</p>
+  </footer>
+</body>
+</html>

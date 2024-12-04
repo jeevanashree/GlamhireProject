@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <h1>Pay for your Order</h1>
+    <button id="pay-button">Pay with Razorpay</button>
+
+    <script>
+        document.getElementById('pay-button').onclick = function() {
+            // Make a request to your server to create an order
+            fetch('/create-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    amount: 100, // Amount to pay in rupees
+                    userId: 1,   // User ID from session or user data
+                    itemId: 1    // Item ID of the product being purchased
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                var options = {
+                    key: data.key_id, // Your Razorpay Key ID
+                    amount: data.amount, // Amount to pay (in paise)
+                    currency: "INR",
+                    order_id: data.orderId,
+                    handler: function (response) {
+                        // Send payment success details to the backend for verification
+                        fetch('/payment-success', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                paymentId: response.razorpay_payment_id,
+                                orderId: data.orderId,
+                                signature: response.razorpay_signature,
+                                userId: 1,   // User ID from session or user data
+                                itemId: 1    // Item ID of the product being purchased
+                            })
+                        })
+                        .then(response => response.text())
+                        .then(message => alert(message));
+                    },
+                    prefill: {
+                        name: "Customer Name",
+                        email: "customer@example.com",
+                        contact: "9999999999"
+                    },
+                    notes: {
+                        address: "Razorpay Corporate Office"
+                    },
+                    theme: {
+                        color: "#F37254"
+                    }
+                };
+                var rzp1 = new Razorpay(options);
+                rzp1.open();
+            })
+            .catch(error => alert('Error creating order.'));
+        };
+    </script>
+</body>
+</html>

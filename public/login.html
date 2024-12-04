@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlamHire | Login & Register</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background: url('https://www.next.co.uk/cms/resource/image/188334/portrait_ratio1x1/305/305/1403f4a66439636be0b6212e2952b122/BB34CF88FC58FA1DE1765A4BC93A7283/girls.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .brand-logo img {
+            max-width: 120px;
+        }
+
+        .form-header button {
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .form-header button:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Custom Animations */
+        .fadeIn {
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex justify-center items-center bg-gradient-to-br from-purple-600 via-pink-500 to-red-500">
+
+    <div class="form-container relative">
+        <div class="brand-logo text-center fadeIn">
+            <img src="glamhire.png" alt="GlamHire Logo" class="mx-auto">
+        </div>
+
+        <div class="form-header flex justify-around mt-6 fadeIn">
+            <button id="login-btn" class="px-6 py-3 bg-gradient-to-r from-pink-500 to-red-400 text-white rounded-xl shadow-md hover:bg-gradient-to-l focus:outline-none" onclick="showLogin()">
+                Login
+            </button>
+            <button id="register-btn" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-400 text-white rounded-xl shadow-md hover:bg-gradient-to-l focus:outline-none" onclick="showRegister()">
+                Register
+            </button>
+        </div>
+
+        <div id="login-form" class="form-content mt-8 fadeIn">
+           
+            <form action="/login" method="POST" class="mt-4">
+                <input type="email" name="email" placeholder="Email" required class="w-full p-3 mt-2 border rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-md">
+                <input type="password" name="password" placeholder="Password" required class="w-full p-3 mt-4 border rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-md">
+                <button type="submit" class="w-full mt-6 py-3 bg-pink-500 text-white rounded-xl hover:bg-pink-600 focus:outline-none shadow-md">
+                    Login
+                </button>
+            </form>
+        </div>
+
+        <div id="register-form" class="form-content mt-8 hidden fadeIn">
+           
+            <form action="/register" method="POST" class="mt-4">
+                <input type="text" name="fullName" placeholder="Full Name" required class="w-full p-3 mt-2 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-md">
+                <input type="email" name="email" placeholder="Email" required class="w-full p-3 mt-4 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-md">
+                <input type="password" name="password" placeholder="Password" required class="w-full p-3 mt-4 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-md">
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" required class="w-full p-3 mt-4 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-md">
+                <button type="submit" class="w-full mt-6 py-3 bg-blue-500 text-white rounded-xl hover:bg-blue-600 focus:outline-none shadow-md">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showLogin() {
+            gsap.to("#login-form", { opacity: 1, duration: 0.5, display: "block" });
+            gsap.to("#register-form", { opacity: 0, duration: 0.5, display: "none" });
+        }
+
+        function showRegister() {
+            gsap.to("#register-form", { opacity: 1, duration: 0.5, display: "block" });
+            gsap.to("#login-form", { opacity: 0, duration: 0.5, display: "none" });
+        }
+
+        // GSAP Intro Animation
+        gsap.from(".form-container", { y: -100, opacity: 0, duration: 1 });
+        gsap.from(".brand-logo img", { scale: 0, duration: 1, delay: 0.5 });
+        gsap.from(".form-header button", {
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            duration: 0.8,
+            delay: 1,
+        });
+    </script>
+</body>
+
+</html>

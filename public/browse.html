@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Collection | GlamHire</title>
+  <link href="browse.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Browse Our Stylish Collection</h1>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Filters -->
+  <section class="filters">
+    <h2>Filter by Event Type</h2>
+    <select id="event-type">
+      <option value="wedding">Wedding</option>
+      <option value="party">Party</option>
+      <option value="interview">Job Interview</option>
+      <option value="formal">Formal Gathering</option>
+    </select>
+
+    <h2>Filter by Gender</h2>
+    <select id="gender">
+      <option value="women">Women</option>
+      <option value="men">Men</option>
+    </select>
+
+    <h2>Rent or Buy</h2>
+    <select id="option">
+      <option value="both">Both</option>
+      <option value="rent">Rent</option>
+      <option value="buy">Buy</option>
+    </select>
+
+    <button id="apply-filters">Apply Filters</button>
+  </section>
+
+  <!-- Clothing Items -->
+  <section class="clothing-items" id="clothing-items">
+    <!-- Clothing items will be dynamically loaded here -->
+  </section>
+
+  <footer>
+    <p>&copy; 2024 GlamHire | All Rights Reserved</p>
+  </footer>
+
+  <script src="browse.js"></script>
+</body>
+</html>
